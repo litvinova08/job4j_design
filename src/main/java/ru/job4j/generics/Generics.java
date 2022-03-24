@@ -18,16 +18,24 @@ public class Generics {
         gen.printObject(second);
         gen.printObject(third);
         System.out.println();
-
-//        gen.printBoundedWildCard(first);  нельзя применить метод к классу Animal, так как он является родителем Predator, а не наследником
+        /**
+         * gen.printBoundedWildCard(first);
+         * нельзя применить метод к классу Animal, \
+         * так как он является родителем Predator, а не наследником
+         */
         gen.printBoundedWildCard(second);
         gen.printBoundedWildCard(third);
         System.out.println();
 
         gen.printLowerBoundedWildCard(first);
         gen.printLowerBoundedWildCard(second);
-//        gen.printLowerBoundedWildCard(third);нельзя применить метод к классу Tiger, так как он является наследником Predator, а не родителем
-    }
+        /**
+         * gen.printLowerBoundedWildCard(third);
+         * нельзя применить метод к классу Tiger,
+         * так как он является наследником Predator, а не родителем
+         *
+         */
+  }
 
     public void printObject(List<?> list) {
         for (Iterator<?> it = list.iterator(); it.hasNext();) {
