@@ -20,7 +20,7 @@ public class Generics {
         System.out.println();
         /**
          * gen.printBoundedWildCard(first);
-         * нельзя применить метод к классу Animal, \
+         * нельзя применить метод к классу Animal,
          * так как он является родителем Predator, а не наследником
          */
         gen.printBoundedWildCard(second);
