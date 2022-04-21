@@ -6,6 +6,31 @@ import static org.junit.Assert.*;
 
 
 public class SimpleTreeTest {
+
+    @Test
+    public void whenBinary() {
+        SimpleTree<Integer> tree = new SimpleTree<>(1);
+        tree.add(1, 2);
+        tree.add(1, 3);
+        tree.add(2, 4);
+        tree.add(2, 5);
+        tree.add(3, 6);
+                assertTrue(tree.isBinary());
+    }
+
+    @Test
+    public void whenNotBinary() {
+        SimpleTree<Integer> tree = new SimpleTree<>(1);
+        tree.add(1, 2);
+        tree.add(1, 3);
+        tree.add(2, 4);
+        tree.add(2, 5);
+        tree.add(3, 6);
+        tree.add(3, 7);
+        tree.add(3, 8);
+        assertFalse(tree.isBinary());
+            }
+
     @Test
     public void when6ElFindLastThen6() {
         Tree<Integer> tree = new SimpleTree<>(1);
