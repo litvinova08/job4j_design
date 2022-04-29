@@ -18,10 +18,8 @@ public class SimpleTree<E> implements Tree<E> {
         if (optionalParent.isPresent()) {
             Optional<Node<E>> optionalChild = findBy(child);
             if (optionalChild.isEmpty()) {
-                if (!optionalParent.get().children.contains(child)) {
                     optionalParent.get().children.add(new Node<>(child));
                     rsl = true;
-                }
             }
         }
 
