@@ -40,7 +40,7 @@ public class Analizy {
     }
 
             public static void main(String[]args) {
-                Analizy analizy = new Analizy();
+                Analysis analizy = new Analysis();
                 analizy.unavailable("./data/source.txt", "./data/target.txt");
             }
         }
