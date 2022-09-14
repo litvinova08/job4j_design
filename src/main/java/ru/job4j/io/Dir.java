@@ -13,10 +13,7 @@ public class Dir {
             throw new IllegalArgumentException(String.format("Not directory %s", file.getAbsoluteFile()));
         }
         for (File subfile : Objects.requireNonNull(file.listFiles())) {
-            System.out.println(subfile.getName() + " size: " + subfile.length());
-//        System.out.println(String.format("size : %s", file.getTotalSpace()));
-//        for (File subfile : file.listFiles()) {
-//            System.out.println(subfile.getAbsoluteFile());
+            System.out.println(subfile.getName() + " size: " + subfile.length() / 1024 + " kb");
         }
     }
 }
